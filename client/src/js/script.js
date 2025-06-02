@@ -51,16 +51,18 @@ window.onscroll = () =>{
 
 // ------------------- ADMIN CRUD -------------------
 const adminProductFormContainer = document.getElementById('admin-product-form-container');
-const productFormTitle = adminProductFormContainer.querySelector('.form-title');
+const productFormTitle = adminProductFormContainer ? adminProductFormContainer.querySelector('.form-title') : null;
 const productIdField = document.getElementById('product-id');
 const productNameInput = document.getElementById('product-name-input');
 const productPriceInput = document.getElementById('product-price-input');
 const productImageInput = document.getElementById('product-image-input');
+const productCategoryInput = document.getElementById('product-category-input'); // Thêm dòng này
 const saveProductBtn = document.getElementById('save-product-btn');
 const cancelEditBtn = document.getElementById('cancel-edit-btn');
 const showAddProductFormBtn = document.getElementById('show-add-product-form-btn');
 
 function showProductForm(mode = 'add', productData = null) {
+    if (!adminProductFormContainer) return;
     adminProductFormContainer.style.display = 'block';
     if (mode === 'edit' && productData) {
         productFormTitle.textContent = 'Edit Product';
@@ -68,51 +70,56 @@ function showProductForm(mode = 'add', productData = null) {
         productNameInput.value = productData.name;
         productPriceInput.value = productData.price;
         productImageInput.value = productData.image;
+        productCategoryInput.value = productData.category || ''; // Thêm dòng này
         cancelEditBtn.style.display = 'inline-block';
     } else {
         productFormTitle.textContent = 'Add New Product';
-        productIdField.value = ''; // Clear ID for add mode
+        productIdField.value = '';
         productNameInput.value = '';
         productPriceInput.value = '';
         productImageInput.value = '';
+        productCategoryInput.value = ''; // Thêm dòng này
         cancelEditBtn.style.display = 'none';
     }
 }
 
 function resetProductForm() {
+    if (!adminProductFormContainer) return;
     adminProductFormContainer.style.display = 'none';
     productFormTitle.textContent = 'Add/Edit Product';
     productIdField.value = '';
     productNameInput.value = '';
     productPriceInput.value = '';
     productImageInput.value = '';
+    productCategoryInput.value = ''; // Thêm dòng này
     cancelEditBtn.style.display = 'none';
 }
 
-showAddProductFormBtn.addEventListener('click', () => showProductForm('add'));
-saveProductBtn.addEventListener('click', handleProductFormSubmit);
-cancelEditBtn.addEventListener('click', resetProductForm);
+if (showAddProductFormBtn) showAddProductFormBtn.addEventListener('click', () => showProductForm('add'));
+if (saveProductBtn) saveProductBtn.addEventListener('click', handleProductFormSubmit);
+if (cancelEditBtn) cancelEditBtn.addEventListener('click', resetProductForm);
 
 
 async function handleProductFormSubmit() {
     const name = productNameInput.value.trim();
     const price = parseFloat(productPriceInput.value);
     const image = productImageInput.value.trim();
+    const category = productCategoryInput.value.trim(); // Thêm dòng này
     const currentId = productIdField.value;
 
-    if (!name || isNaN(price) || price <= 0 || !image) {
-        alert("Vui lòng nhập đầy đủ và hợp lệ thông tin sản phẩm (tên, giá > 0, URL hình ảnh).");
+    if (!name || isNaN(price) || price <= 0 || !image || !category) {
+        alert("Vui lòng nhập đầy đủ và hợp lệ thông tin sản phẩm (tên, giá > 0, URL hình ảnh, danh mục).");
         return;
     }
 
-    const productData = { name, price, image };
+    const productData = { name, price, image, category }; // Thêm category
 
     try {
-        if (currentId) { // Update existing product
+        if (currentId) {
             const productRef = doc(db, 'products', currentId);
             await updateDoc(productRef, productData);
             alert("Đã cập nhật sản phẩm thành công!");
-        } else { // Add new product
+        } else {
             await addDoc(collection(db, "products"), productData);
             alert("Sản phẩm đã được thêm thành công!");
         }
@@ -135,9 +142,11 @@ async function loadAdminProducts() {
             const data = docSnap.data();
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${docSnap.id.substring(0, 6)}...</td> <td><img src="${data.image}" alt="${data.name}" style="width: 50px; height: 50px; object-fit: cover;"></td>
+                <td>${docSnap.id.substring(0, 6)}...</td>
+                <td><img src="${data.image}" alt="${data.name}" style="width: 50px; height: 50px; object-fit: cover;"></td>
                 <td>${data.name}</td>
                 <td>₹${data.price.toFixed(2)}</td>
+                <td>${data.category || ''}</td>
                 <td>
                     <button class="btn small-btn" onclick="editProduct('${docSnap.id}')">Edit</button>
                     <button class="btn small-btn delete-btn" onclick="deleteProduct('${docSnap.id}')">Delete</button>
@@ -195,12 +204,13 @@ async function loadUserProducts() {
             const data = docSnap.data();
             const box = document.createElement('div');
             box.className = 'box';
-            // Assign category if available in data, otherwise 'all' or a default
             box.setAttribute('data-category', data.category || 'all');
             box.innerHTML = `
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart product-cart-icon"></a>
-                    <a href="#" class="fas fa-heart"></a> <a href="#" class="fas fa-eye"></a>  </div>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="product-detail.html?name=${encodeURIComponent(data.name)}&price=${encodeURIComponent(data.price)}&image=${encodeURIComponent(data.image)}&description=${encodeURIComponent(data.description || '')}" class="fas fa-eye"></a>
+                </div>
                 <div class="image">
                     <img src="${data.image}" alt="${data.name}">
                 </div>
@@ -212,7 +222,6 @@ async function loadUserProducts() {
                     <div class="price">₹${data.price.toFixed(2)}</div>
                 </div>
             `;
-            // Add to cart functionality for product listing
             const addToCartBtn = box.querySelector('.product-cart-icon');
             addToCartBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -385,11 +394,14 @@ function setupMenuAddToCartButtons() {
 // ------------------- INIT -------------------
 window.onload = function () {
     loadUserProducts();
-    loadAdminProducts();
+    if (document.querySelector('.admin-product-table tbody')) {
+        loadAdminProducts();
+        resetProductForm();
+    }
     renderCart();
-    setupMenuAddToCartButtons(); // Setup listeners for menu items
-    resetProductForm(); // Ensure admin form is hidden initially
+    setupMenuAddToCartButtons();
 };
+
 // Function to handle login (client-side simulation)
 function loginUser(username) {
     localStorage.setItem('loggedInUser', username); // Store username in local storage

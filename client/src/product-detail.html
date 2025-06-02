@@ -37,12 +37,16 @@
     const name = params.get('name');
     const price = params.get('price');
     const image = params.get('image');
+    const description = params.get('description'); // Thêm dòng này
 
     // Gán vào HTML
     document.getElementById('product-name').textContent = name;
     document.getElementById('product-price').textContent = price;
     document.getElementById('product-image').src = image;
     document.getElementById('product-image').alt = name;
+    if (description) {
+      document.getElementById('product-description').textContent = description;
+    }
   </script>
 </body>
 </html>
