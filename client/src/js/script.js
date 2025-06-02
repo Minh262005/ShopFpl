@@ -458,12 +458,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // --- IMPORTANT: In a real application, you'd send these credentials to a server for verification ---
-            // For this client-side example, we'll simulate a successful login
-            if (username && password) { // Simple check, no actual verification
+            if (username && password) { 
                 alert('Login successful! Welcome, ' + username);
-                loginUser(username); // Simulate login
-                window.location.href = 'index.html'; // Redirect to home page
+                loginUser(username); 
+                window.location.href = 'index.html'; 
             } else {
                 alert('Please enter username and password.');
             }
