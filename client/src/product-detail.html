@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.jpg" alt="Coffee-shop-logo">
+    </a>
+    <nav class="navbar">
+      <a href="index.html#home">home</a>
+      <a href="index.html#menu">back to menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-detail">
+      <div class="container">
+        <img id="product-image" src="" alt="Product Image">
+        <div class="details">
+          <h1 id="product-name">Product Name</h1>
+          <p id="product-description">This is a great coffee product you'll love!</p>
+          <p class="price">Price: $<span id="product-price"></span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Lấy query parameters từ URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const price = params.get('price');
+    const image = params.get('image');
+
+    // Gán vào HTML
+    document.getElementById('product-name').textContent = name;
+    document.getElementById('product-price').textContent = price;
+    document.getElementById('product-image').src = image;
+    document.getElementById('product-image').alt = name;
+  </script>
+</body>
+</html>
