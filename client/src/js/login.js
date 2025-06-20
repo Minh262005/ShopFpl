@@ -1,35 +1,26 @@
+import { login } from "../server/auth.js";
+
 // DOM handler
 const loginForm = document.getElementById('loginForm');
 
-// Arrow function & async/await
-const handleLogin = async (e) => {
+loginForm.addEventListener('submit', async function (e) {
   e.preventDefault();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-  // Destructuring input values
-  const { username, password } = Object.fromEntries(new FormData(loginForm));
-
-  try {
-    const res = await fetch('http://localhost:3001/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ username, password })
-    });
-
-    const data = await res.json();
-
-    if (data.status === 'success') {
-      window.location.href = data.redirectUrl;
-    } else {
-      alert(data.message);
-      window.location.href = data.redirectUrl;
-    }
-
-  } catch (err) {
-    console.error('Login failed', err);
-    alert('Something went wrong. Please try again later.');
+  if (!username || !password) {
+    alert("Please enter your username and password.");
+    return;
   }
-};
 
-loginForm.addEventListener('submit', handleLogin);
+  // Gọi hàm login từ server/auth.js (ưu tiên kiểm tra db.json nếu có API)
+  const result = await login(username, password);
+  if (result.success) {
+    // Đảm bảo lưu user object đầy đủ (bao gồm VaiTro)
+    localStorage.setItem('currentUser', JSON.stringify(result.user));
+    alert("Login successful!");
+    window.location.href = "index.html";
+  } else {
+    alert(result.message || "Incorrect username or password!");
+  }
+});

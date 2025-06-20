@@ -1,213 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+   
   <meta charset="UTF-8">
+   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Shop</title>
+    <title>Coffee Shop</title>
+   
   <link rel="stylesheet" href="css/styles.css">
+   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-  <header class="header">
-    <a href="#" class="logo">
-      <img src="img/logo.jpg" alt="Coffee-shop-logo">
-    </a>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="img/logo.jpg" alt="Coffee-shop-logo">
+          </a>
 
-    <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <a href="#menu">menu</a>
-      <a href="#products">products</a>
-      <a href="#review">review</a>
-      <a href="#contact">contact</a>
-      <a href="#blogs">blogs</a>
-      <a href="admin.html">admin</a>
-          <a href="login.html" id="authLink">login</a>
-
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#blogs">blogs</a>
+            <a href="admin-category.html" id="adminLink">Admin</a>
+            <a href="cart.html" class="active">Cart</a>
+            <a href="login.html" id="authLink">Login</a>
+           
+         
     </nav>
 
-    <div class="icons">
-      <div class="fas fa-search" id="search-btn"></div>
-      <div class="fas fa-shopping-cart" id="cart-btn"></div>
-      <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+          </div>
 
-    <div class="search-form">
-      <input type="search" id="search-box" placeholder="search-here...">
-      <label for="search-box" class="fas fa-search"></label>
-    </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search-here...">
+            <label for="search-box" class="fas fa-search"></label>
+          </div>
 
-    <div class="cart-items-container">
-      </div>
-  </header>
+        <div class="cart-items-container">
+          </div>
+      </header>
 
-<section class="home" id="home">
-  <div class="content">
-    <h3>Awaken with aromatic coffee</h3>
-    <p>Brewing fresh coffee in the morning is a daily enchantment. The aroma of grinding beans, the hiss of hot water meeting grounds—pure anticipation. That first sip, warm and flavorful, wakes up the senses and sets the tone for an energized day ahead. It's not just a beverage; it's a daily celebration, turning the ordinary into something extraordinary.</p>
-    <a href="#menu" class="btn">get yours now</a>
-  </div>
-</section>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Awaken with aromatic coffee</h3>
+            <p>Brewing fresh coffee in the morning is a daily enchantment. The aroma of grinding beans, the hiss of hot
+        water
+                meeting grounds—pure anticipation. That first sip, warm and flavorful, wakes up the senses and sets the
+        tone for
+                an energized day ahead. It's not just a beverage; it's a daily celebration, turning the ordinary into
+        something
+                extraordinary.</p>
+            <a href="#menu" class="btn">Get yours now</a>
+          </div>
+      </section>
 
-<section class="about" id="about">
-  <h1 class="heading"> <span>about</span> us </h1>
-  <div class="row">
-    <div class="image">
-      <img src="img/aboutUs.jpg" alt="About Us Image">
-    </div>
-    <div class="content">
-      <h3>what makes our coffee special ? </h3>
-      <p>Our coffee is a symphony of excellence, blending premium beans from unique regions with artisanal roasting for a taste that transcends ordinary. Focused on freshness, sustainability, and ethical practices, each cup is a celebration of passion and purpose. From custom blends catering to diverse palates to a commitment to fair trade, our coffee is a sip of extraordinary, crafted with care for a truly special experience.</p>
-      <a href="#products" class="btn">learn more</a>
-    </div>
-  </div>
-</section>
+    <section class="about" id="about">
+        <h1 class="heading"> <span>about</span> us </h1>
+        <div class="row">
+            <div class="image">
+                <img src="img/aboutUs.jpg" alt="About Us Image">
+              </div>
+            <div class="content">
+                <h3>What makes our coffee special?</h3>
+                <p>Our coffee is a symphony of excellence, blending premium beans from unique regions with artisanal
+          roasting
+                    for a taste that transcends ordinary. Focused on freshness, sustainability, and ethical practices,
+          each cup is
+                    a celebration of passion and purpose. From custom blends catering to diverse palates to a commitment
+          to fair
+                    trade, our coffee is a sip of extraordinary, crafted with care for a truly special experience.</p>
+                <a href="#products" class="btn">Learn more</a>
+              </div>
+          </div>
+      </section>
 
-<section class="menu" id="menu">
-  <h1 class="heading">our <span>menu</span> </h1>
-  <div class="box-container">
-    <div class="box" data-category="espresso"> <img src="img/menu1.jpg" alt="Espresso">
-      <h3>espresso</h3>
-      <div class="price">$30 <span>35</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Espresso" data-price="30" data-image="img/menu1.jpg">add to cart</a>
-    </div>
-    <div class="box" data-category="latte"> <img src="img/menu2.jpg" alt="Latte">
-      <h3>latte</h3>
-      <div class="price">$25.99 <span>29.99</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Latte" data-price="25.99" data-image="img/menu2.jpg">add to cart</a>
-    </div>
-    <div class="box" data-category="black-coffee"> <img src="img/menu3.jpg" alt="Black Coffee">
-      <h3>black coffee</h3>
-      <div class="price">$20 <span>25</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Black Coffee" data-price="20" data-image="img/menu3.jpg">add to cart</a>
-    </div>
-    <div class="box" data-category="mocha"> <img src="img/menu4.jpg" alt="Mocha">
-      <h3>mocha</h3>
-      <div class="price">$25 <span>28</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Mocha" data-price="25" data-image="img/menu4.jpg">add to cart</a>
-    </div>
-    <div class="box" data-category="frappe"> <img src="img/menu5.jpg" alt="Frappe">
-      <h3>frappe</h3>
-      <div class="price">$20 <span>25</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Frappe" data-price="20" data-image="img/menu5.jpg">add to cart</a>
-    </div>
-    <div class="box" data-category="cappuccino"> <img src="img/menu6.jpg" alt="Cappuccino">
-      <h3>cappuccino</h3>
-      <div class="price">$15.99 <span>20.99</span></div>
-      <a href="#" class="btn add-to-cart-btn-menu" data-name="Cappuccino" data-price="15.99" data-image="img/menu6.jpg">add to cart</a>
-    </div>
-  </div>
-</section>
+    <section class="menu" id="menu">
+        <h1 class="heading">our <span>products</span> </h1>
+        <div class="box-container" id="menu-product-container">
+            </div>
+      </section>
 
+    <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <p>"Absolutely thrilled with this coffee! The premium beans and artisanal roasting create a flavor
+          symphony
+                    that's unmatched. Every sip feels like a luxurious escape. Plus, their commitment to freshness and
+          ethical
+                    practices makes it a guilt-free indulgence. A coffee connoisseur's dream come true!"</p>
+                <img src="img/reviewer1.jpg" class="user" alt="Reviewer Urvashi">
+                <h3>Hip</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i             class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+            <div class="box">
+                <p>"This coffee is a game-changer! The richness of the flavor and the freshness with each cup is
+          unbeatable. I
+                    love that they prioritize sustainability and ethical practices. It's more than just coffee; it's a
+          delightful
+                    experience brewed with care and conscience. Highly recommend!"</p>
+                <img src="img/reviewer1.jpg" class="user" alt="Reviewer Whitepanther">
+                <h3>Minh</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i             class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+            <div class="box">
+                <p>"Obsessed with this coffee! The taste is a perfect blend of bold and smooth – a true morning delight.
+          The
+                    commitment to freshness and sustainable practices is a big win for me. It's become my daily ritual,
+          and I
+                    can't imagine starting my day without it. 5 stars for sure!"</p>
+                <img src="img/reviewer1.jpg" class="user" alt="Reviewer Arpita">
+                <h3>Bin</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i             class="fas fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-  
-  <div class="box-container">
-    </div>
-  <div class="pagination">
-    </div>
-</section>
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <iframe class="map" src="https://maps.google.com/maps?q=coffeeshop&hl=en&z=14&output=embed"
+        allowfullscreen=""         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <h3>Get in touch</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Name">
+                  </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email">
+                  </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="Phone number">
+                  </div>
+                <a href="" class="btn" target="_blank">Contact via LinkedIn</a>
+              </form>
+          </div>
+      </section>
 
-<section class="review" id="review">
-<h1 class="heading">customer's <span>review</span></h1>
-<div class="box-container">
-  <div class="box">
-    <p>"Absolutely thrilled with this coffee! The premium beans and artisanal roasting create a flavor symphony that's unmatched. Every sip feels like a luxurious escape. Plus, their commitment to freshness and ethical practices makes it a guilt-free indulgence. A coffee connoisseur's dream come true!"</p>
-    <img src="img/reviewer1.jpg" class="user" alt="Reviewer Urvashi">
-    <h3>Nhi</h3>
-    <div class="stars">
-      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-    </div>
-  </div>
-  <div class="box">
-    <p>"This coffee is a game-changer! The richness of the flavor and the freshness with each cup is unbeatable. I love that they prioritize sustainability and ethical practices. It's more than just coffee; it's a delightful experience brewed with care and conscience. Highly recommend!"</p>
-    <img src="img/reviewer2.jpg" class="user" alt="Reviewer Whitepanther">
-    <h3>Minh</h3>
-    <div class="stars">
-      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-    </div>
-  </div>
-  <div class="box">
-    <p>"Obsessed with this coffee! The taste is a perfect blend of bold and smooth – a true morning delight. The commitment to freshness and sustainable practices is a big win for me. It's become my daily ritual, and I can't imagine starting my day without it. 5 stars for sure!"</p>
-    <img src="img/reviewer3.jpg" class="user" alt="Reviewer Arpita">
-    <h3>Bin</h3>
-    <div class="stars">
-      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-    </div>
-  </div>
-</div>
-</section>
+    <section class="blogs" id="blogs">
+        <h1 class="heading">our <span>blogs</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image"><img src="img/blog1.jpg" alt="Blog Image 1"></div>
+                <div class="content">
+                    <a href="#" class="title">Exquisite Coffee Symphony</a>
+                    <span>by admin/ 14th Feb, 2025</span>
+                    <p>Embrace the day with a cup of our exquisite coffee - a symphony of rich flavors and unmatched
+            freshness.
+                        Elevate your coffee experience and make each sip a moment of indulgence and delight. </p>
+                    <a href="#" class="btn">Read more</a>
+                  </div>
+              </div>
+            <div class="box">
+                <div class="image"><img src="img/blog2.jpg" alt="Blog Image 2"></div>
+                <div class="content">
+                    <a href="#" class="title">Premium Sustainable Brew</a>
+                    <span>by admin/ 10th Jan, 2025</span>
+                    <p>Sip into bliss with our coffee, where every cup tells a story of premium beans, artisanal
+            craftsmanship,
+                        and a commitment to sustainability. Elevate your coffee moments, because life is too short for
+            mediocre
+                        brews</p>
+                    <a href="#" class="btn">Read more</a>
+                  </div>
+              </div>
+            <div class="box">
+                <div class="image"><img src="img/blog3.jpg" alt="Blog Image 3"></div>
+                <div class="content">
+                    <a href="#" class="title">Sensory Coffee Journey</a>
+                    <span>by admin/ 31st Dec, 2025</span>
+                    <p>Dive into a world of flavor and warmth with our exceptional coffee. Crafted with passion, every
+            sip is a
+                        journey, awakening your senses to the perfect blend of freshness and indulgence.</p>
+                    <a href="#" class="btn">Read more</a>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-<section class="contact" id="contact">
-<h1 class="heading"><span>contact</span> us</h1>
-<div class="row">
-  <iframe class="map" src="https://maps.google.com/maps?q=coffeeshop&hl=en&z=14&output=embed"
-  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <form action="">
-    <h3>get in touch</h3>
-    <div class="inputBox">
-      <span class="fas fa-user"></span>
-      <input type="text" placeholder="name">
-    </div>
-    <div class="inputBox">
-      <span class="fas fa-envelope"></span>
-      <input type="email" placeholder="email">
-    </div>
-    <div class="inputBox">
-      <span class="fas fa-phone"></span>
-      <input type="number" placeholder="number">
-    </div>
-    <a href="" class="btn" target="_blank">contact via linkedin</a>
-    </form>
-</div>
-</section>
+    <section class="thank-you" id="thank-you"
+    style="display: none; text-align: center; padding: 5rem 7%; flex-direction: column; align-items: center; justify-content: center;">
+        <h1 class="heading">Thank you!</h1>
+        <p><span id="thank-you-customer-name"></span> your order has been placed successfully.</p>
+        <p id="thank-you-order-id"></p>
+        <a href="index.html#home" class="btn" id="continue-shopping-btn">Continue shopping</a>
+  </section>
 
-<section class="blogs" id="blogs">
-  <h1 class="heading">our <span>blogs</span></h1>
-  <div class="box-container">
-    <div class="box">
-      <div class="image"><img src="img/blog1.jpg" alt="Blog Image 1"></div>
-      <div class="content">
-        <a href="#" class="title">Exquisite Coffee Symphony</a>
-        <span>by admin/ 14th feb,2025</span>
-        <p>Embrace the day with a cup of our exquisite coffee - a symphony of rich flavors and unmatched freshness. Elevate your coffee experience and make each sip a moment of indulgence and delight. </p>
-        <a href="#" class="btn">read more</a>
-      </div>
+  <footer class="footer">
+    <div class="share">
+      <a href="#" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
+      <a href="#" class="fab fa-instagram" target="_blank" aria-label="Instagram"></a>
+      <a href="#" class="fab fa-linkedin" target="_blank" aria-label="LinkedIn"></a>
     </div>
-    <div class="box">
-      <div class="image"><img src="img/blog2.jpg" alt="Blog Image 2"></div>
-      <div class="content">
-        <a href="#" class="title">Premium Sustainable Brew</a>
-        <span>by admin/ 10th jan,2025</span>
-        <p>Sip into bliss with our coffee, where every cup tells a story of premium beans, artisanal craftsmanship, and a commitment to sustainability. Elevate your coffee moments, because life is too short for mediocre brews</p>
-        <a href="#" class="btn">read more</a>
-      </div>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#review">Review</a>
+      <a href="#contact">Contact</a>
+      <a href="#blogs">Blogs</a>
+      <a href="admin-category.html">Admin</a>
+
     </div>
-    <div class="box">
-      <div class="image"><img src="img/blog3.jpg" alt="Blog Image 3"></div>
-      <div class="content">
-        <a href="#" class="title">Sensory Coffee Journey</a>
-        <span>by admin/ 31st dec,2025</span>
-        <p>Dive into a world of flavor and warmth with our exceptional coffee. Crafted with passion, every sip is a journey, awakening your senses to the perfect blend of freshness and indulgence.</p>
-        <a href="#" class="btn">read more</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="footer">
-  <div class="share">
-    <a href="#" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
-    <a href="#" class="fab fa-linkedin" target="_blank" aria-label="LinkedIn"></a>
-    <a href="#" class="fab fa-instagram" target="_blank" aria-label="Instagram"></a>
-    </div>
-  <div class="links">
-    <a href="#home">home</a><a href="#about">about</a><a href="#menu">menu</a><a href="#products">products</a><a href="#review">review</a><a href="#contact">contact</a><a href="#blogs">blogs</a><a href="#admin">admin</a>
-  </div>
-  <div class="credit">created by <span>Minh</span>| all rights reserved </div>
-</section>
-
-<script type="module" src="js/script.js"></script>
+    <div class="credit">created by <span>Minh</span>| all rights reserved </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

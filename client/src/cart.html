@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .cart-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+      max-width: 700px;
+      margin: 48px auto 0 auto;
+      padding: 36px 32px 28px 32px;
+    }
+    .cart-card h2 {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 2em;
+      color: #6b4f27;
+    }
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+    }
+    .cart-table th, .cart-table td {
+      padding: 12px 8px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+    .cart-table th {
+      background: #f7f3ee;
+      color: #6b4f27;
+      font-weight: bold;
+    }
+    .cart-table td img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .cart-total {
+      text-align: right;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #8d6e3f;
+      margin-bottom: 18px;
+    }
+    .cart-actions {
+      margin-top: 24px;
+      text-align: center;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+    }
+    .cart-actions .btn {
+      width: auto;
+      min-width: 140px;
+    }
+    .empty-cart {
+      text-align: center;
+      color: #888;
+      font-size: 1.1em;
+      margin: 32px 0;
+    }
+    @media (max-width: 700px) {
+      .cart-card { padding: 16px 4px; }
+      .cart-table th, .cart-table td { padding: 8px 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-card">
+    <h2>Giỏ hàng</h2>
+    <div id="cartList"></div>
+    <div class="cart-total" id="cartTotal"></div>
+    <div class="cart-actions">
+      <button id="checkoutBtn" class="btn">Thanh toán</button>
+      <a href="index.html" class="btn">Tiếp tục mua hàng</a>
+    </div>
+  </div>
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Espresso",
+      "price": 30,
+      "originalPrice": 35,
+      "image": "img/menu1.jpg",
+      "description": "Rich and bold espresso crafted from premium beans.",
+      "category": "espresso"
+    },
+    {
+      "id": "2",
+      "name": "Latte",
+      "price": 25.99,
+      "originalPrice": 29.99,
+      "image": "img/menu2.jpg",
+      "description": "Smooth and creamy latte made with fresh milk and espresso.",
+      "category": "latte"
+    },
+    {
+      "id": "3",
+      "name": "Black Coffee",
+      "price": 20,
+      "originalPrice": 25,
+      "image": "img/menu3.jpg",
+      "description": "Bold and rich black coffee brewed to perfection.",
+      "category": "black-coffee"
+    },
+    {
+      "id": "4",
+      "name": "Mocha",
+      "price": 25,
+      "originalPrice": 28,
+      "image": "img/menu4.jpg",
+      "description": "Rich and chocolatey mocha made with premium cocoa and espresso.",
+      "category": "mocha"
+    },
+    {
+      "id": "5",
+      "name": "Frappe",
+      "price": 20,
+      "originalPrice": 25,
+      "image": "img/menu5.jpg",
+      "description": "Chilled and blended frappe with a rich coffee base.",
+      "category": "frappe"
+    },
+    {
+      "id": "6",
+      "name": "Cappuccino",
+      "price": 15.99,
+      "originalPrice": 20.99,
+      "image": "img/menu6.jpg",
+      "description": "Classic cappuccino with a perfect balance of espresso, steamed milk, and foam.",
+      "category": "cappuccino"
+    }
+  ],
+  "orders": [
+    {
+      "id": "3cd0",
+      "customer_name": "Minh (Test Customer)",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 2,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 51.98,
+      "created_date": "2025-06-10T01:12:10.747Z",
+      "status": "pending"
+    },
+    {
+      "id": "1316",
+      "customer_name": "Minh (Test Customer)",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 2,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 51.98,
+      "created_date": "2025-06-10T01:12:27.278Z",
+      "status": "pending"
+    },
+    {
+      "id": "6d7e",
+      "customer_name": "Minh (Test Customer)",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 1,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 25.99,
+      "created_date": "2025-06-10T01:15:04.400Z",
+      "status": "pending"
+    },
+    {
+      "id": "69b7",
+      "customer_name": "minh",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 1,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 25.99,
+      "created_date": "2025-06-10T01:26:02.063Z",
+      "status": "pending"
+    },
+    {
+      "id": "4e9c",
+      "customer_name": "minh",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 1,
+          "unit_price": 25.99
+        },
+        {
+          "productId": "3",
+          "name": "Black Coffee",
+          "quantity": 1,
+          "unit_price": 20
+        },
+        {
+          "productId": "4",
+          "name": "Mocha",
+          "quantity": 1,
+          "unit_price": 25
+        }
+      ],
+      "total_amount": 70.99,
+      "created_date": "2025-06-10T01:27:00.921Z",
+      "status": "pending"
+    },
+    {
+      "id": "e1b8",
+      "customer_name": "minh",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 1,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 25.99,
+      "created_date": "2025-06-10T01:28:00.185Z",
+      "status": "pending"
+    },
+    {
+      "id": "1f02",
+      "customer_name": "minh",
+      "customer_address": "Hà Nội (Test Address)",
+      "customer_email": "minh_test@example.com",
+      "customer_phone_number": "0123456789",
+      "items": [
+        {
+          "productId": "2",
+          "name": "Latte",
+          "quantity": 1,
+          "unit_price": 25.99
+        }
+      ],
+      "total_amount": 25.99,
+      "created_date": "2025-06-10T01:35:06.147Z",
+      "status": "pending"
+    }
+  ],
+  "TaiKhoan": [
+    {
+      "id": "75da",
+      "MaTK": "1",
+      "TenTK": "minh",
+      "MatKhau": "1",
+      "VaiTro": "admin"
+    }
+  ],
+  "DanhMuc": [
+    {
+      "MaDM": "1",
+      "TenDM": "espresso",
+      "id": "14cc"
+    },
+    {
+      "MaDM": "2",
+      "TenDM": "latte",
+      "id": "ce9c"
+    },
+    {
+      "MaDM": "3",
+      "TenDM": "black-coffee",
+      "id": "f185"
+    },
+    {
+      "MaDM": "4",
+      "TenDM": "mocha",
+      "id": "a832"
+    },
+    {
+      "MaDM": "5",
+      "TenDM": "frappe",
+      "id": "3f77"
+    },
+    {
+      "MaDM": "6",
+      "TenDM": "cappuccino",
+      "id": "85ba"
+    }
+  ],
+  "SanPham": [
+    {
+      "MaSP": "1",
+      "TenSP": "Espresso",
+      "HinhAnh": "img/menu1.jpg",
+      "DonGia": 30,
+      "MoTa": "Rich and bold espresso crafted from premium beans.",
+      "MaDM": "1",
+      "id": "ac67"
+    },
+    {
+      "MaSP": "2",
+      "TenSP": "Latte",
+      "HinhAnh": "img/menu2.jpg",
+      "DonGia": 25.99,
+      "MoTa": "Smooth and creamy latte made with fresh milk and espresso.",
+      "MaDM": "2",
+      "id": "e263"
+    },
+    {
+      "MaSP": "3",
+      "TenSP": "Black Coffee",
+      "HinhAnh": "img/menu3.jpg",
+      "DonGia": 20,
+      "MoTa": "Bold and rich black coffee brewed to perfection.",
+      "MaDM": "3",
+      "id": "cbdc"
+    },
+    {
+      "MaSP": "4",
+      "TenSP": "Mocha",
+      "HinhAnh": "img/menu4.jpg",
+      "DonGia": 25,
+      "MoTa": "Rich and chocolatey mocha made with premium cocoa and espresso.",
+      "MaDM": "4",
+      "id": "af96"
+    },
+    {
+      "MaSP": "5",
+      "TenSP": "Frappe",
+      "HinhAnh": "img/menu5.jpg",
+      "DonGia": 20,
+      "MoTa": "Chilled and blended frappe with a rich coffee base.",
+      "MaDM": "5",
+      "id": "3383"
+    },
+    {
+      "MaSP": "6",
+      "TenSP": "Cappuccino",
+      "HinhAnh": "img/menu6.jpg",
+      "DonGia": 15.99,
+      "MoTa": "Classic cappuccino with a perfect balance of espresso, steamed milk, and foam.",
+      "MaDM": "6",
+      "id": "2dd3"
+    },
+    {
+      "id": "1a37",
+      "MaSP": "7",
+      "TenSP": "1",
+      "HinhAnh": "1",
+      "DonGia": 1,
+      "MoTa": "1",
+      "MaDM": "1"
+    }
+  ]
+}
