@@ -24,41 +24,51 @@ function renderCart() {
         </tr>
       </thead>
       <tbody>
-        ${cart.map(item => {
-          const itemTotal = item.price * item.quantity;
-          total += itemTotal;
-          return `
+        ${cart
+          .map((item) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            return `
             <tr>
-              <td><img src="${item.image || 'img/menu1.jpg'}" alt="${item.name}"></td>
+              <td><img src="${item.image || "img/menu1.jpg"}" alt="${
+              item.name
+            }"></td>
               <td>${item.name}</td>
               <td>${item.price.toLocaleString()}</td>
               <td>${item.quantity}</td>
               <td>${itemTotal.toLocaleString()}</td>
-              <td><button class="btn" style="width:auto;padding:4px 12px;" onclick="removeFromCart('${item.id}')">Xóa</button></td>
+              <td><button class="btn" style="width:auto;padding:4px 12px;" onclick="removeFromCart('${
+                item.id
+              }')">Xóa</button></td>
             </tr>
           `;
-        }).join("")}
+          })
+          .join("")}
       </tbody>
     </table>
   `;
-  cartTotalDiv.textContent = `Tổng tiền: ${total.toLocaleString()} VNĐ`;
+  cartTotalDiv.textContent = `Tổng tiền: ${total.toLocaleString()} $`;
   checkoutBtn.style.display = "inline-block";
 }
 
-window.removeFromCart = function(id) {
+window.removeFromCart = function (id) {
   let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-  cart = cart.filter(item => item.id !== id);
+  cart = cart.filter((item) => item.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 };
 
-checkoutBtn.onclick = function() {
+checkoutBtn.onclick = function () {
   let cart = JSON.parse(localStorage.getItem("cart") || "[]");
   // Lưu thống kê cho admin
   let thongke = JSON.parse(localStorage.getItem("thongke") || "{}");
-  cart.forEach(item => {
+  cart.forEach((item) => {
     // Thống kê số lượng sản phẩm
-    thongke[item.id] = thongke[item.id] || { name: item.name, SoLuong: 0, DoanhThu: 0 };
+    thongke[item.id] = thongke[item.id] || {
+      name: item.name,
+      SoLuong: 0,
+      DoanhThu: 0,
+    };
     thongke[item.id].SoLuong += item.quantity;
     thongke[item.id].DoanhThu += item.price * item.quantity;
   });

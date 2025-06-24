@@ -21,53 +21,92 @@
     }
     .cart-table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       margin-bottom: 18px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(139, 110, 63, 0.08);
+      background: #fcfaf7;
     }
     .cart-table th, .cart-table td {
-      padding: 12px 8px;
+      padding: 16px 10px;
       border-bottom: 1px solid #eee;
       text-align: center;
+      font-size: 1.08em;
+      transition: background 0.2s;
     }
     .cart-table th {
-      background: #f7f3ee;
+      background: linear-gradient(90deg, #f7e9d6 0%, #f7f3ee 100%);
       color: #6b4f27;
       font-weight: bold;
+      border-bottom: 2px solid #e0c9a6;
+      letter-spacing: 0.5px;
+    }
+    .cart-table tr:last-child td {
+      border-bottom: none;
+    }
+    .cart-table tbody tr:hover {
+      background: #f5eddc;
     }
     .cart-table td img {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       object-fit: cover;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(139,110,63,0.10);
+      border: 1.5px solid #e0c9a6;
+      background: #fff;
     }
     .cart-total {
       text-align: right;
-      font-size: 1.2em;
+      font-size: 1.35em;
       font-weight: bold;
-      color: #8d6e3f;
+      color: #a67c3c;
       margin-bottom: 18px;
+      background: #f7e9d6;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(139,110,63,0.07);
+      letter-spacing: 0.5px;
     }
     .cart-actions {
-      margin-top: 24px;
+      margin-top: 28px;
       text-align: center;
       display: flex;
-      gap: 18px;
+      gap: 22px;
       justify-content: center;
     }
     .cart-actions .btn {
       width: auto;
-      min-width: 140px;
+      min-width: 150px;
+      padding: 12px 0;
+      font-size: 1.08em;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #a67c3c 0%, #e0c9a6 100%);
+      color: #fff;
+      border: none;
+      box-shadow: 0 2px 8px rgba(139,110,63,0.10);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .cart-actions .btn:hover {
+      background: linear-gradient(90deg, #8d6e3f 0%, #c2a06b 100%);
+      box-shadow: 0 4px 16px rgba(139,110,63,0.13);
     }
     .empty-cart {
       text-align: center;
-      color: #888;
-      font-size: 1.1em;
-      margin: 32px 0;
+      color: #b8a07a;
+      font-size: 1.15em;
+      margin: 36px 0;
+      letter-spacing: 0.2px;
     }
     @media (max-width: 700px) {
       .cart-card { padding: 16px 4px; }
-      .cart-table th, .cart-table td { padding: 8px 2px; }
+      .cart-table th, .cart-table td { padding: 10px 2px; font-size: 0.98em; }
+      .cart-table td img { width: 40px; height: 40px; }
+      .cart-total { font-size: 1.08em; padding: 8px 6px; }
+      .cart-actions .btn { min-width: 110px; font-size: 0.98em; }
     }
   </style>
 </head>

@@ -83,7 +83,6 @@ body {
 .forgot-container:hover {
   box-shadow: 0 16px 48px rgba(211,173,127,0.22), 0 4px 16px rgba(0,0,0,0.13);
   background: rgba(255,255,255,0.22);
-  transform: translateY(-8px) scale(1.03) rotate(-1deg);
 }
 
 /* Animated underline for headings */
@@ -545,7 +544,6 @@ section:hover {
   display: flex;
   align-items: center;
   background: url(../img/home.jpg) no-repeat, linear-gradient(120deg, #23232b 0%, #181820 100%);
-  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   border-radius: 1.2rem;
@@ -618,7 +616,7 @@ section:hover {
 }
 .menu .box-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(3, minmax(30rem, 1fr));
   gap: 1.5rem;
 }
 .menu .box-container .box{
@@ -719,8 +717,7 @@ section:hover {
   margin-left: .5rem; /* Added spacing */
 }
 .review .box-container{
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
+  display: flex;
 }
 .review .box-container .box{
   border: var(--border);
@@ -806,8 +803,7 @@ color: #fff;
 
 /* Blog Styles */
 .blogs .box-container{
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
+ display: flex;
 }
 
 .blogs .box-container .box{

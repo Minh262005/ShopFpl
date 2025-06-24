@@ -134,7 +134,7 @@
           </div>
           <div class="product-detail-info">
             <h2>${product.name}</h2>
-            <div class="price">Price: ${product.price ? product.price.toLocaleString() : ""} VND</div>
+            <div class="price">Price: ${product.price ? product.price.toLocaleString() : ""} $</div>
             <div class="desc">${product.description || ""}</div>
             <div class="category">Category: ${categoryName || ""}</div>
             <button class="btn" onclick="addToCart('${product.id}')">Add to Cart</button>

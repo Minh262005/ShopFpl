@@ -202,6 +202,34 @@
       "TenTK": "minh",
       "MatKhau": "1",
       "VaiTro": "admin"
+    },
+    {
+      "id": "63e4",
+      "MaTK": "2",
+      "TenTK": "admin",
+      "MatKhau": "q",
+      "VaiTro": "admin"
+    },
+    {
+      "id": "2795",
+      "MaTK": "3",
+      "TenTK": "bin",
+      "MatKhau": "1",
+      "VaiTro": "admin"
+    },
+    {
+      "id": "6a45",
+      "MaTK": "4",
+      "TenTK": "demo",
+      "MatKhau": "1",
+      "VaiTro": "user"
+    },
+    {
+      "id": "0f6a",
+      "MaTK": "5",
+      "TenTK": "minhhh",
+      "MatKhau": "1",
+      "VaiTro": "user"
     }
   ],
   "DanhMuc": [
@@ -234,6 +262,16 @@
       "MaDM": "6",
       "TenDM": "cappuccino",
       "id": "85ba"
+    },
+    {
+      "id": "bb73",
+      "MaDM": "7",
+      "TenDM": "cape"
+    },
+    {
+      "id": "cfad",
+      "MaDM": "8",
+      "TenDM": "cafe"
     }
   ],
   "SanPham": [
@@ -290,15 +328,6 @@
       "MoTa": "Classic cappuccino with a perfect balance of espresso, steamed milk, and foam.",
       "MaDM": "6",
       "id": "2dd3"
-    },
-    {
-      "id": "1a37",
-      "MaSP": "7",
-      "TenSP": "1",
-      "HinhAnh": "1",
-      "DonGia": 1,
-      "MoTa": "1",
-      "MaDM": "1"
     }
   ]
 }

@@ -1,114 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Category & Product Management</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-    /* Giao diện form */
-    body {
-        background: #f7f7f7;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    /* Thêm padding-top để tránh header che mất nội dung */
-    @media (min-width: 601px) {
         body {
-            padding-top: 90px;
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-    }
-    @media (max-width: 600px) {
-        body {
-            padding-top: 120px;
+
+        @media (min-width: 601px) {
+            body {
+                padding-top: 90px;
+            }
         }
-    }
-    h2 {
-        text-align: center;
-        margin-top: 32px;
-        color: #6b4f27;
-    }
-    #category-form, #product-form {
-        background: #fff;
-        max-width: 420px;
-        margin: 32px auto 16px auto;
-        padding: 24px 32px 18px 32px;
-        border-radius: 10px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        display: flex;
-        gap: 12px;
-        align-items: flex-end;
-    }
-    #category-form input[type="text"], #product-form input[type="text"], #product-form input[type="number"], #product-form select {
-        flex: 1;
-        padding: 8px 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-        margin-right: 8px;
-    }
-    #category-form button, #product-form button {
-        background: #8d6e3f;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 8px 18px;
-        font-size: 1em;
-        cursor: pointer;
-        margin-right: 4px;
-        transition: background 0.2s;
-    }
-    #category-form button:hover, #product-form button:hover {
-        background: #6b4f27;
-    }
-    table {
-        background: #fff;
-        border-collapse: collapse;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 900px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    th, td {
-        padding: 12px 10px;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-    }
-    th {
-        background: #f3e9db;
-        color: #6b4f27;
-        font-weight: bold;
-    }
-    tr:last-child td {
-        border-bottom: none;
-    }
-    .btn {
-        background: #8d6e3f;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        padding: 5px 14px;
-        font-size: 0.95em;
-        cursor: pointer;
-        margin: 0 2px;
-        transition: background 0.2s;
-    }
-    .btn:hover {
-        background: #6b4f27;
-    }
-    @media (max-width: 600px) {
-        #category-form, #product-form, table {
-            max-width: 98vw;
-            padding: 10px;
+
+        @media (max-width: 600px) {
+            body {
+                padding-top: 120px;
+            }
         }
-        th, td {
-            padding: 8px 4px;
+
+        h2 {
+            text-align: center;
+            margin-top: 32px;
+            color: #6b4f27;
         }
-    }
+
+        #category-form,
+        #product-form {
+
+            margin: 32px auto 16px auto;
+            padding: 24px 32px 18px 32px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        #category-form input[type="text"],
+        #product-form input[type="text"],
+        #product-form input[type="number"],
+        #product-form select {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-right: 8px;
+        }
+
+        #category-form button,
+        #product-form button {
+            background: #8d6e3f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 18px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-right: 4px;
+            transition: background 0.2s;
+        }
+
+        #category-form button:hover,
+        #product-form button:hover {
+            background: #6b4f27;
+        }
+
+        table {
+            background: #fff;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #f3e9db;
+            color: #6b4f27;
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .btn {
+            background: #8d6e3f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 14px;
+            font-size: 0.95em;
+            cursor: pointer;
+            margin: 0 2px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #6b4f27;
+        }
+
+        @media (max-width: 600px) {
+
+            #category-form,
+            #product-form,
+            table {
+                max-width: 98vw;
+                padding: 10px;
+            }
+
+            th,
+            td {
+                padding: 8px 4px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Add a back to home button at the top -->
     <div style="text-align:right; margin: 12px 24px 0 0;">
@@ -207,13 +232,13 @@
                     <th>Product ID</th>
                     <th>Product Name</th>
                     <th>Sold Quantity</th>
-                    <th>Revenue (VND)</th>
+                    <th>Revenue ($)</th>
                 </tr>
             </thead>
             <tbody id="statistics-table-body"></tbody>
         </table>
         <div style="text-align:right; max-width:900px; margin:0 auto;">
-            <strong>Total revenue: <span id="total-revenue">0</span> VND</strong>
+            <strong>Total revenue: <span id="total-revenue">0</span> $</strong>
         </div>
     </div>
 
@@ -238,126 +263,126 @@
     <script src="js/admin-category.js"></script>
     <script src="js/admin-product.js"></script>
     <script>
-    // XÓA đoạn kiểm tra quyền admin, chỉ giữ lại phần chuyển đổi tab và validate form
-    document.addEventListener('DOMContentLoaded', function() {
-        // Chuyển đổi giữa 3 phần
-        var btnCat = document.getElementById('show-category');
-        var btnProd = document.getElementById('show-product');
-        var btnStat = document.getElementById('show-statistics');
-        var catSection = document.getElementById('category-section');
-        var prodSection = document.getElementById('product-section');
-        var statSection = document.getElementById('statistics-section');
+        // XÓA đoạn kiểm tra quyền admin, chỉ giữ lại phần chuyển đổi tab và validate form
+        document.addEventListener('DOMContentLoaded', function () {
+            // Chuyển đổi giữa 3 phần
+            var btnCat = document.getElementById('show-category');
+            var btnProd = document.getElementById('show-product');
+            var btnStat = document.getElementById('show-statistics');
+            var catSection = document.getElementById('category-section');
+            var prodSection = document.getElementById('product-section');
+            var statSection = document.getElementById('statistics-section');
 
-        function showSection(section) {
-            catSection.style.display = section === 'cat' ? '' : 'none';
-            prodSection.style.display = section === 'prod' ? '' : 'none';
-            statSection.style.display = section === 'stat' ? '' : 'none';
-            btnCat.classList.toggle('active', section === 'cat');
-            btnProd.classList.toggle('active', section === 'prod');
-            btnStat.classList.toggle('active', section === 'stat');
-            if (section === 'stat') renderStatistics();
-        }
+            function showSection(section) {
+                catSection.style.display = section === 'cat' ? '' : 'none';
+                prodSection.style.display = section === 'prod' ? '' : 'none';
+                statSection.style.display = section === 'stat' ? '' : 'none';
+                btnCat.classList.toggle('active', section === 'cat');
+                btnProd.classList.toggle('active', section === 'prod');
+                btnStat.classList.toggle('active', section === 'stat');
+                if (section === 'stat') renderStatistics();
+            }
 
-        btnCat.onclick = function() { showSection('cat'); };
-        btnProd.onclick = function() { showSection('prod'); };
-        btnStat.onclick = function() { showSection('stat'); };
+            btnCat.onclick = function () { showSection('cat'); };
+            btnProd.onclick = function () { showSection('prod'); };
+            btnStat.onclick = function () { showSection('stat'); };
 
-        // Mặc định hiển thị danh mục
-        showSection('cat');
+            // Mặc định hiển thị danh mục
+            showSection('cat');
 
-        // --- VALIDATE FORM SẢN PHẨM ---
-        var productForm = document.getElementById('product-form');
-        if (productForm) {
-            productForm.addEventListener('submit', function(e) {
-                var name = document.getElementById('product-name').value.trim();
-                var image = document.getElementById('product-image').value.trim();
-                var price = document.getElementById('product-price').value.trim();
-                var desc = document.getElementById('product-desc').value.trim();
-                var cat = document.getElementById('product-category').value.trim();
-                if (!name) {
-                    alert("Product name cannot be empty!");
-                    document.getElementById('product-name').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!/^[\p{L}\d\s_-]+$/u.test(name)) {
-                    alert("Product name can only contain letters, numbers, spaces, hyphens or underscores!");
-                    document.getElementById('product-name').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!image) {
-                    alert("Image URL cannot be empty!");
-                    document.getElementById('product-image').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!desc) {
-                    alert("Description cannot be empty!");
-                    document.getElementById('product-desc').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!/^[\p{L}\d\s.,;:!?"'()\-_/]+$/u.test(desc)) {
-                    alert("Description can only contain letters, numbers, spaces and some basic punctuation!");
-                    document.getElementById('product-desc').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!cat) {
-                    alert("Please select a category!");
-                    document.getElementById('product-category').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!price || isNaN(price) || parseFloat(price) <= 0) {
-                    alert("Price must be a number greater than 0!");
-                    document.getElementById('product-price').focus();
-                    e.preventDefault();
-                    return false;
-                }
-            });
-        }
-        // --- VALIDATE FORM DANH MỤC ---
-        var categoryForm = document.getElementById('category-form');
-        if (categoryForm) {
-            categoryForm.addEventListener('submit', function(e) {
-                var name = document.getElementById('category-name').value.trim();
-                if (!name) {
-                    alert("Category name cannot be empty!");
-                    document.getElementById('category-name').focus();
-                    e.preventDefault();
-                    return false;
-                }
-                if (!/^[\p{L}\d\s_-]+$/u.test(name)) {
-                    alert("Category name can only contain letters, numbers, spaces, hyphens or underscores!");
-                    document.getElementById('category-name').focus();
-                    e.preventDefault();
-                    return false;
-                }
-            });
-        }
-    });
+            // --- VALIDATE FORM SẢN PHẨM ---
+            var productForm = document.getElementById('product-form');
+            if (productForm) {
+                productForm.addEventListener('submit', function (e) {
+                    var name = document.getElementById('product-name').value.trim();
+                    var image = document.getElementById('product-image').value.trim();
+                    var price = document.getElementById('product-price').value.trim();
+                    var desc = document.getElementById('product-desc').value.trim();
+                    var cat = document.getElementById('product-category').value.trim();
+                    if (!name) {
+                        alert("Product name cannot be empty!");
+                        document.getElementById('product-name').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!/^[\p{L}\d\s_-]+$/u.test(name)) {
+                        alert("Product name can only contain letters, numbers, spaces, hyphens or underscores!");
+                        document.getElementById('product-name').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!image) {
+                        alert("Image URL cannot be empty!");
+                        document.getElementById('product-image').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!desc) {
+                        alert("Description cannot be empty!");
+                        document.getElementById('product-desc').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!/^[\p{L}\d\s.,;:!?"'()\-_/]+$/u.test(desc)) {
+                        alert("Description can only contain letters, numbers, spaces and some basic punctuation!");
+                        document.getElementById('product-desc').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!cat) {
+                        alert("Please select a category!");
+                        document.getElementById('product-category').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!price || isNaN(price) || parseFloat(price) <= 0) {
+                        alert("Price must be a number greater than 0!");
+                        document.getElementById('product-price').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+            }
+            // --- VALIDATE FORM DANH MỤC ---
+            var categoryForm = document.getElementById('category-form');
+            if (categoryForm) {
+                categoryForm.addEventListener('submit', function (e) {
+                    var name = document.getElementById('category-name').value.trim();
+                    if (!name) {
+                        alert("Category name cannot be empty!");
+                        document.getElementById('category-name').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (!/^[\p{L}\d\s_-]+$/u.test(name)) {
+                        alert("Category name can only contain letters, numbers, spaces, hyphens or underscores!");
+                        document.getElementById('category-name').focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+            }
+        });
 
-    // --- THỐNG KÊ SẢN PHẨM ---
-    async function renderStatistics() {
-        // Lấy dữ liệu sản phẩm
-        let products = JSON.parse(localStorage.getItem("SanPham") || "null");
-        if (!products) {
-            const res = await fetch("../src/db.json");
-            const data = await res.json();
-            products = data.SanPham || [];
-        }
-        // Lấy thống kê từ localStorage (dạng {MaSP: {name, SoLuong, DoanhThu}})
-        let thongke = JSON.parse(localStorage.getItem("thongke") || "{}");
-        const tbody = document.getElementById("statistics-table-body");
-        const totalRevenueSpan = document.getElementById("total-revenue");
-        tbody.innerHTML = "";
-        let totalRevenue = 0;
-        products.forEach(prod => {
-            const tk = thongke[prod.MaSP] || { SoLuong: 0, DoanhThu: 0 };
-            totalRevenue += tk.DoanhThu;
-            tbody.innerHTML += `
+        // --- THỐNG KÊ SẢN PHẨM ---
+        async function renderStatistics() {
+            // Lấy dữ liệu sản phẩm
+            let products = JSON.parse(localStorage.getItem("SanPham") || "null");
+            if (!products) {
+                const res = await fetch("../src/db.json");
+                const data = await res.json();
+                products = data.SanPham || [];
+            }
+            // Lấy thống kê từ localStorage (dạng {MaSP: {name, SoLuong, DoanhThu}})
+            let thongke = JSON.parse(localStorage.getItem("thongke") || "{}");
+            const tbody = document.getElementById("statistics-table-body");
+            const totalRevenueSpan = document.getElementById("total-revenue");
+            tbody.innerHTML = "";
+            let totalRevenue = 0;
+            products.forEach(prod => {
+                const tk = thongke[prod.MaSP] || { SoLuong: 0, DoanhThu: 0 };
+                totalRevenue += tk.DoanhThu;
+                tbody.innerHTML += `
                 <tr>
                     <td>${prod.MaSP}</td>
                     <td>${prod.TenSP}</td>
@@ -365,17 +390,19 @@
                     <td>${tk.DoanhThu.toLocaleString()}</td>
                 </tr>
             `;
-        });
-        totalRevenueSpan.textContent = totalRevenue.toLocaleString();
-    }
+            });
+            totalRevenueSpan.textContent = totalRevenue.toLocaleString();
+        }
     </script>
 </body>
+
 </html>
-                </tr>
-            `;
-        });
-        totalRevenueSpan.textContent = totalRevenue.toLocaleString();
-    }
-    </script>
+</tr>
+`;
+});
+totalRevenueSpan.textContent = totalRevenue.toLocaleString();
+}
+</script>
 </body>
+
 </html>

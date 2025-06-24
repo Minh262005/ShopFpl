@@ -1,9 +1,8 @@
 import { login } from "../server/auth.js";
 
-// DOM handler
-const loginForm = document.getElementById('loginForm');
+const loginForm = document.getElementById("loginForm");
 
-loginForm.addEventListener('submit', async function (e) {
+loginForm.addEventListener("submit", async function (e) {
   e.preventDefault();
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -13,11 +12,9 @@ loginForm.addEventListener('submit', async function (e) {
     return;
   }
 
-  // Gọi hàm login từ server/auth.js (ưu tiên kiểm tra db.json nếu có API)
   const result = await login(username, password);
   if (result.success) {
-    // Đảm bảo lưu user object đầy đủ (bao gồm VaiTro)
-    localStorage.setItem('currentUser', JSON.stringify(result.user));
+    localStorage.setItem("currentUser", JSON.stringify(result.user));
     alert("Login successful!");
     window.location.href = "index.html";
   } else {
