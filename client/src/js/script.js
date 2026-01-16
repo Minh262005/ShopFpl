@@ -30,7 +30,7 @@ window.onscroll = () => {
 };
 
 // ------------------- UTILITY FUNCTION -------------------
-const API_BASE_URL = "http://localhost:3000"; // Đảm bảo URL này khớp với JSON Server của bạn
+const API_BASE_URL = ""; // Đảm bảo URL này khớp với JSON Server của bạn
 
 async function fetchData(url, options = {}) {
   try {
